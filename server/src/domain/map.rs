@@ -1,23 +1,25 @@
 use std::collections::HashMap;
 
+use bevy_ecs::component::Component;
+
 #[derive(Debug)]
 pub struct Map {
     pub submaps: HashMap<String, SubMap>,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Component)]
 pub struct SubMap {
-    pub cells: Vec<Vec<Cell>>,
+    pub tile_map: Vec<Vec<Tile>>,
 }
 
 #[derive(Debug)]
-pub struct Cell {
+pub struct Tile {
     // index corresponds to z-index
-    pub cell_contents: Vec<CellLayer>,
+    pub layers: Vec<TileLayer>,
 }
 
 #[derive(Debug)]
-pub enum CellLayer {
+pub enum TileLayer {
     Grass(GrassType),
     Rock(RockType),
     Tree(TreeType),
@@ -79,5 +81,3 @@ pub enum PathDirection {
     DownToRight,
     DownToLeft,
 }
-
-pub struct MapManager {}

@@ -4,7 +4,14 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-axum = { version = "0.7.5", features = ["ws"] }
-tokio = { version = "1.38.0", features = ["full", "rt-multi-thread"] }
+axum = { version = "0.7.5" }
+tokio = { version = "1.38.0", features = ["macros", "rt-multi-thread"] }
 tokio-tungstenite = "0.23.0"
 futures = "0.3"
+bevy_ecs = "0.13.2"
+leafwing-input-manager = "0.13.3"
+socketioxide = { version = "0.13.1", features = ["extensions", "state"] }
+serde = "1.0.203"
+tower = "0.4.13"
+tower-http = { version = "0.5.2", features = ["cors", "fs"] }
+crossbeam-channel = "0.5"

@@ -1,10 +1,9 @@
-pub struct Body {
-    parts: HashMap<String, Box<Part>>,
+pub struct HumanoidBody {
+    pub upper_body: UpperHumanoidBody,
+    pub mid_body: MidHumanoidBody,
+    pub lower_body: LowerHumanoidBody,
 }
 
-pub enum PartType {
-    Head,
-    Body,
-    Hand,
-    Leg,
-}
+pub struct UpperHumanoidBody {}
+pub struct MidHumanoidBody {}
+pub struct LowerHumanoidBody {}
