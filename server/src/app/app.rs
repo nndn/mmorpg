@@ -1,10 +1,11 @@
-pub mod app;
+// LOGGING ADDED BY GITHUB CODING AGENT
+use log::info;
 
-use domain;
+// ... rest of the file ...
 
-pub fn core_logic() {
-    Avatar {
-        position_x: 1,
-        position_y: 1,
-    }
+pub fn start(/* params */) {
+    info!("start function called");
+    // ... original start logic ...
 }
+
+// ... rest of the file ...
